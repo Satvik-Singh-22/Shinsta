@@ -9,6 +9,7 @@ export default function RegisterPage() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [name, setName]= useState('');
 
   const handleRegister = async () => {
     
@@ -32,13 +33,28 @@ export default function RegisterPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+      <div className="bg-white p-8 rounded-lg shadow-lg max-w-45">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-800">Create Account</h2>
-          <p className="text-gray-600 mt-2">Sign up to get started</p>
+          <h2 className="text-3xl font-bold text-gray-800">Shinsta</h2>
+          <p className="text-gray-600 mt-2">Sign up to see photos and videos from your friends.</p>
         </div>
         
         <form onSubmit={handleRegister}>
+          <div className="mb-6">
+            <label htmlFor="full name" className="block text-sm font-medium text-gray-700 mb-1">
+              Full Name
+            </label>
+            <input
+              id="name"
+              type="string"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+              placeholder="My Name"
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </div>
+          
           <div className="mb-6">
             <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
               Email Address
