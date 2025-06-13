@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-export default function NavBar(){
+export default function NavBar() {
     return (
         <nav className="flex gap-6 p-4 bg-gray-800 text-white">
             <Link href= "/">Home</Link>

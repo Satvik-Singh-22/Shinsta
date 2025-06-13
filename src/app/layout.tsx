@@ -8,8 +8,8 @@ export const metadata = {
 };
 
 export default function RootLayout({
-  children,
-}: {
+  children,                            // children is the param of the function RootLayout; its type is ReactNode
+}: {                                   // ReactNode: the HTML type thingy which we return
   children: React.ReactNode;
 }) {
   return (
